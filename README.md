@@ -1,6 +1,6 @@
 # Hotwire Use Case
 
-A delve into discovering how to use [Hotwire](https://hotwired.dev/) with Rails application. 
+A ride into discovering how to use [Hotwire](https://hotwired.dev/) with Rails application. 
 
 Hotwire is a collection of tools (Turbo, Stimulus, Strada) released int the end of 2020, developed by the creators of Basecamp. It was initially developed as a mean to pull data from the backend and rendering it on the frontend for Basecamp's new mail system called Hey.
 
