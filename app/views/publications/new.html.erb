@@ -1,0 +1,29 @@
+<div style="max-width: 30rem">
+  <%= form_with(model: @publication.applicant, id: dom_id(@publication)) do |form| %>
+    <% if @publication.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(pub.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+        <ul>
+          <% @publication.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :content, class: "form-label" %>
+      <%= form.text_area :content, class: "form-control" %>
+    </div>
+
+    <div class="actions mt-4 mb-5">
+      <%= form.submit "Add Publication", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <%= turbo_frame_tag dom_id(applicant)  do %>
+        <article class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= applicant.name %>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted mb-3">
+                    <%= applicant.position %>
+                </h6>
+                <%= link_to 'View Profile', applicant, class: "btn btn-sm btn-primary me-2", target: "_top" %>
+                <%= link_to 'Delete', applicant, method: :delete, class: "btn btn-sm btn-outline-primary" %>
+            </div>
+        </article>
+    <% end %>
+</div>

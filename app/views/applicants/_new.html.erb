@@ -1,0 +1,7 @@
+<section>
+    <h4>Add Applicant</h4><hr>
+
+    <%= turbo_frame_tag "applicant_new" do %>
+        <%= render 'form', applicant: @applicant %>
+    <% end %>
+</section>

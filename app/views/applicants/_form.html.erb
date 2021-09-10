@@ -1,0 +1,29 @@
+<div style="max-width: 30rem">
+  <%= form_with(model: applicant, id: dom_id(applicant)) do |form| %>
+    <% if applicant.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+
+        <ul>
+          <% applicant.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field mb-3">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :position, class: "form-label" %>
+      <%= form.text_field :position, class: "form-control" %>
+    </div>
+
+    <div class="actions mt-4 mb-5">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

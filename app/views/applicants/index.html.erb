@@ -1,0 +1,41 @@
+<% if flash.now[:notice] %>
+  <div class="alert alert-warning">
+    <%= flash.now[:notice] %>
+  </div>
+<% end %>
+
+<% if false %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @applicants.each do |applicant| %>
+      <tr>
+        <td><%= applicant.name %></td>
+        <td><%= applicant.position %></td>
+        <td><%= link_to 'Show', applicant %></td>
+        <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+        <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+<%= turbo_stream_from "applicants" %>
+
+<%= render "applicants/new", applicant: @applicant %>
+
+
+<h4>Applicant List</h4><hr>
+<div class="row">
+  <%= turbo_frame_tag "applicants", :class => "row" do %>
+    <%= render @applicants %>
+  <% end %>
+</div>

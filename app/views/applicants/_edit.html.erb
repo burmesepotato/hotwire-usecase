@@ -1,0 +1,9 @@
+<section>
+    <% if false %>
+        <h4>Edit Applicant</h4><hr>
+    <% end %>
+
+    <%= turbo_frame_tag "applicant_edit" do %>
+        <%= render 'form', applicant: @applicant %>
+    <% end %>
+</section>
