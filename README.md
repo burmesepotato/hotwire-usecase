@@ -1,24 +1,26 @@
-# README
+# Hotwire Use Case
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A delve into discovering how to use [Hotwire](https://hotwired.dev/) with Rails application. 
 
-Things you may want to cover:
+Hotwire is a collection of tools (Turbo, Stimulus, Strada) released int the end of 2020, developed by the creators of Basecamp. It was initially developed as a mean to pull data from the backend and rendering it on the frontend for Basecamp's new mail system called Hey.
 
-* Ruby version
+This project is my attempt to scratch the surface of how to use Hotwire, what we cannot use it for.
 
-* System dependencies
+![Screenshot of sample project](https://github.com/burmesepotato/git-readme/blob/main/hotwire-usecase/hotwire-usecase-1.jpg)
 
-* Configuration
+### Gem and Node package versions
 
-* Database creation
+* Ruby: '2.7.3'
+* Rails: '~> 6.1.4'
+* Redis: '~> 4.0'
+* @hotwired/stimulus: '^3.0.0-beta.1'
+* @hotwired/turbo-rails: '^7.0.0-rc.3'
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Project Setup
+```bash
+git clone git@github.com:burmesepotato/hotwire-usecase.git
+cd hotwire-usecase
+bundle install
+rails db:migrate
+rails s
+```
